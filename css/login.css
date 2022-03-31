@@ -1,6 +1,6 @@
 #loginContainer
 {
-    margin-top:40px;
+    margin-top:3%;
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 
 }
@@ -17,16 +17,10 @@
     text-align: center;
 }
 
-#login-right .logo
-{
-    width:20%;
-    height: 60px;
-    float: left;
-}
 
 #login-right h1
 {
-    padding-top: 40%;
+    padding-top: 20%;
     text-align: center;
     margin-bottom: 50px;
 }
@@ -67,11 +61,30 @@
         padding:10px;
         position: absolute;
         top:35%;
+        left: 15%;  
+        margin:inherit;
+        background-color: rgba(255,255,255,0.8);
+       border-radius: 14px;
+        width: 25%;
+        text-align: center;
+    }
+    .signupText h3 
+    {
+        margin: 30px;
+    }
+}
+@media screen and (min-width: 1920px) 
+{
+    .signupText
+    {
+        padding:10px;
+        position: absolute;
+        top:35%;
         left: 20%;  
         margin:inherit;
         background-color: rgba(255,255,255,0.8);
        border-radius: 14px;
-        width: 20rem;
+        width: 25%;
         text-align: center;
     }
     .signupText h3 

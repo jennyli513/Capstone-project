@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Mentor-details</title>
+    <title>Add Mentor</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -46,7 +46,7 @@
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
-                <a href="index.html" class="navbar-brand mt-3 mx-1 mb-3">
+                <a href="admin.html" class="navbar-brand mt-3 mx-1 mb-3">
                    Student Mentoring System
                 </a>
                 <div class="d-flex align-items-center mt-4 ms-4 mb-4">
@@ -139,61 +139,61 @@
                 </div>
             </nav>
             <!-- Navbar End -->
-
-           <!--Mentor detais-->
-           <div class="container-fluid pt-4 px-4"> 
+            
+            <!--Add mentor-->
+            <div class="container-fluid pt-4 px-4"> 
                 <div class="bg-light rounded h-100 p-4">
-                    <h6 class="mb-4">Mentor</h6>
+                    <h6 class="mb-4">Add New Mentor</h6>
                     <a href="#" style="text-decoration: underline;"><i class="fa-solid fa-arrow-left mx-2"></i>Back to list</a>
                     <form>
                         <div class="row mb-3">
                             <label for="name" class="col-sm-2 col-form-label">Name</label>
                             <div class="col-sm-10">
-                                <input type="name" class="form-control" id="email" value="Hillary">
+                                <input type="name" class="form-control" id="email">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="studentId" class="col-sm-2 col-form-label">Student ID</label>
                             <div class="col-sm-10">
-                                <input type="studentId" class="form-control" id="studentId" value="100678789">
+                                <input type="studentId" class="form-control" id="studentId">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="email" class="col-sm-2 col-form-label">Email</label>
                             <div class="col-sm-10">
-                                <input type="email" class="form-control" id="email" value="100678789@student.holmesglen.edu.au">
+                                <input type="email" class="form-control" id="email">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <legend class="col-form-label col-sm-2 pt-0">Available Days</legend>
                             <div class="col-sm-10">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck1" disabled>
-                                    <label class="form-check-label" for="gridCheck1">
+                                    <input class="form-check-input" type="checkbox" id="availableDayCheck1" >
+                                    <label class="form-check-label" for="availableDayCheck1">
                                         Monday
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck2" disabled>
-                                    <label class="form-check-label" for="gridCheck2">
+                                    <input class="form-check-input" type="checkbox" id="availableDayCheck2" >
+                                    <label class="form-check-label" for="availableDayCheck2">
                                         Tuesday
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck3" disabled>
-                                    <label class="form-check-label" for="gridCheck3">
+                                    <input class="form-check-input" type="checkbox" id="availableDayCheck3" >
+                                    <label class="form-check-label" for="availableDayCheck3">
                                         Wednesday
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck4" disabled>
-                                    <label class="form-check-label" for="gridCheck4">
+                                    <input class="form-check-input" type="checkbox" id="availableDayCheck4" >
+                                    <label class="form-check-label" for="availableDayCheck4">
                                         Thursday
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck5" checked>
-                                    <label class="form-check-label" for="gridCheck5" >
+                                    <input class="form-check-input" type="checkbox" id="availableDayCheck5" >
+                                    <label class="form-check-label" for="availableDayCheck5" >
                                         Friday
                                     </label>
                                 </div>
@@ -204,28 +204,37 @@
                             <legend class="col-form-label col-sm-2 pt-0">Available Time</legend>
                             <div class="col-sm-10">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck1" disabled>
-                                    <label class="form-check-label" for="gridCheck1">
+                                    <input class="form-check-input" type="checkbox" id="availableTimeCheck1" >
+                                    <label class="form-check-label" for="availableTimeCheck1">
                                        9:00am - 5:00pm
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
-                                    <label class="form-check-label" for="gridCheck2">
+                                    <input class="form-check-input" type="checkbox" id="availableTimeCheck2" >
+                                    <label class="form-check-label" for="availableTimeCheck2">
                                        1:00pm - 5:00om
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck3" disabled>
-                                    <label class="form-check-label" for="gridCheck3">
+                                    <input class="form-check-input" type="checkbox" id="availableTimeCheck3" >
+                                    <label class="form-check-label" for="availableTimeCheck3">
                                         11:00am - 1:00pm
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck4" disabled>
-                                    <label class="form-check-label" for="gridCheck4">
+                                    <input class="form-check-input" type="checkbox" id="availableTimeCheck4" >
+                                    <label class="form-check-label" for="availableTimeCheck4">
                                         1:00pm - 3:00pm
                                     </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="availableTimeCheck5" >
+                                    <label class="form-check-label" for="availableTimeCheck5">
+                                        Other time
+                                    </label>
+                                </div>
+                                <div class="col-sm-10" style="display: none;" id="availableTime">
+                                    <input type="text" class="form-control" placeholder="Write time here">
                                 </div>
                             </div>
                         </div>
@@ -234,123 +243,107 @@
                             <legend class="col-form-label col-sm-2 pt-0">Subject Name</legend>
                             <div class="col-sm-10">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck1" checked>
+                                    <input class="form-check-input" type="checkbox" id="gridCheck1" >
                                     <label class="form-check-label" for="gridCheck1">
                                         Information Systems in organisations ©
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                                    <input class="form-check-input" type="checkbox" id="gridCheck2" >
                                     <label class="form-check-label" for="gridCheck2">
                                         Communications and Teamwork  (C)
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck3" disabled>
+                                    <input class="form-check-input" type="checkbox" id="gridCheck3" >
                                     <label class="form-check-label" for="gridCheck3">
                                         Business Requirements Analysis (C)
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck4" disabled>
+                                    <input class="form-check-input" type="checkbox" id="gridCheck4" >
                                     <label class="form-check-label" for="gridCheck4">
                                         Information Security  Management (Stage 2 E)
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck5" disabled>
+                                    <input class="form-check-input" type="checkbox" id="gridCheck5" >
                                     <label class="form-check-label" for="gridCheck5" >
                                         Change Management  (Stage 2 E)
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck6" disabled>
+                                    <input class="form-check-input" type="checkbox" id="gridCheck6" >
                                     <label class="form-check-label" for="gridCheck6">
                                         Business Decision Analysis  (C)
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck7" disabled>
+                                    <input class="form-check-input" type="checkbox" id="gridCheck7" >
                                     <label class="form-check-label" for="gridCheck7">
                                         Database Design (C)
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck8" disabled>
+                                    <input class="form-check-input" type="checkbox" id="gridCheck8" >
                                     <label class="form-check-label" for="gridCheck8">
                                         Programming Web Services  (Stage 3 & 5 E)
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck9" checked>
+                                    <input class="form-check-input" type="checkbox" id="gridCheck9" >
                                     <label class="form-check-label" for="gridCheck9">
                                         Business transformation and Innovation  (Stage 3 & 5 E)
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck10" disabled>
+                                    <input class="form-check-input" type="checkbox" id="gridCheck10" >
                                     <label class="form-check-label" for="gridCheck10" >
                                         Big Data and Business Intelligence. (C)  
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck11" disabled>
+                                    <input class="form-check-input" type="checkbox" id="gridCheck11" >
                                     <label class="form-check-label" for="gridCheck11">
                                         Enterprise Cloud Computing  (C)  
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck12" checked>
+                                    <input class="form-check-input" type="checkbox" id="gridCheck12" >
                                     <label class="form-check-label" for="gridCheck12">
                                         Project Management(C)
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck13" checked>
+                                    <input class="form-check-input" type="checkbox" id="gridCheck13" >
                                     <label class="form-check-label" for="gridCheck13">
                                         Information Systems Support and Testing  (C)
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck14" disabled>
+                                    <input class="form-check-input" type="checkbox" id="gridCheck14" >
                                     <label class="form-check-label" for="gridCheck14">
                                         IS Project (C) 
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck15" disabled>
+                                    <input class="form-check-input" type="checkbox" id="gridCheck15" >
                                     <label class="form-check-label" for="gridCheck15" >
                                         Ethics and IT Governance  (C) 
                                     </label>
                                 </div>
                             </div>
                         </div>
-                        <div class="row mb-3">
-                            <label for="email" class="col-sm-2 col-form-label">Notes</label>
-                            <div class="col-sm-10">
-                                <textarea class="form-control" placeholder="Can do montoring online" id="floatingTextarea"></textarea>
-                            </div>
-                        </div>
 
                         <div class="mb-5 text-center">
-                            <button type="button" class="btn btn-primary mx-2" onclick="location.href='admin.html'">Back to Dashboard</button>
-                            <button  type="button" class="btn btn-primary mx-2" onclick="showComment();">Write Comment</button>
+                            <button type="button" class="btn btn-primary mx-2" onclick="location.href='admin.html'">Add New Mentor</button>
+                           
                         </div>
-
-                        <div class="row mb-3" id="comment" style="display:none;">
-                            <label for="comment" class="col-sm-2 col-form-label">Comment</label>
-                            <div class="col-sm-10 mb-3">
-                                <textarea class="form-control" placeholder="Wrirte comment here" id="floatingTextarea"></textarea>
-                            </div>
-                            <div class=" text-center ">
-                               <button type="submit" class="btn btn-primary mx-2" onclick="location.href='admin.html'">Send</button>
-                            </div>
-                        </div>
-                      
+  
                     </form>
                 </div>
         </div>
-
+          
             <!-- Footer Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-light rounded-top p-4">
@@ -386,9 +379,11 @@
     <script src="js/main.js"></script>
 
     <script>
-      function showComment(){
-        $("#comment").show();
-      }
+       $("#availableTimeCheck5").click(function() {
+          if($(this).is(":checked")) {
+           $("#availableTime").show(300);
+    } 
+});
     </script>
 </body>
 
