@@ -16,13 +16,15 @@
  
   <div class="container">
     <!--Navbar-->
-    <h1 class="text-" style="background-color: #f8f9fa; margin-bottom: 0">Computing and IT Department</h1>
-    <nav class="navbar navbar-expand-lg sticky-top navbar-light  bg-light">
-     
+    <div style="background-color: #f8f9fa;">
+      <h1>Computing and IT Department</h1>
+    </div>
+   
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light  bg-light"> 
         <div class="container-fluid">
           
           <a class="navbar-brand" href="#" style="color: #00a8ea; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
-            STUDENT ACADEMIC MENTORING SYSTEM 
+            STUDENT MENTORING SYSTEM 
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -70,10 +72,17 @@
                 </ul>
               </li>
               
-              <form class="form-inline">
-                <button class="btn btn-outline-light btn-danger my-2 my-sm-0" type="submit">Login</button>
-                <!-- <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Sign up</button> -->
-              </form>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Login
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">System Admin login</a></li>
+                  <li><a class="dropdown-item" href="#">Teacher login</a></li>
+                  <li><a class="dropdown-item" href="#">Student login</a></li>
+                </ul>
+              </li>
+              
             </ul>
           </div>
         </div>
@@ -122,7 +131,7 @@
 
   <form class="d-flex mt-2">
     <input class="form-control me-2" type="search" placeholder=" " aria-label="Search">
-    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn  mx-3" id="searchBtn" >Search</button>
   </form>
 
   <div class="container pb-3 px-5  pt-2" id="searchfilter" style="background-color:#00a8ea">
@@ -131,9 +140,9 @@
       <div class="col">   
         <select class="form-select" aria-label="Default select example">
           <option selected>Subject Code</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+          <option value="1">System Admin login</option>
+          <option value="2">Teacher login</option>
+          <option value="3">Student login</option>
         </select>
      </div>
     <div class="col">   

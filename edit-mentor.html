@@ -144,7 +144,8 @@
            <div class="container-fluid pt-4 px-4"> 
                 <div class="bg-light rounded h-100 p-4">
                     <h6 class="mb-4">Mentor</h6>
-                    <a href="#" style="text-decoration: underline;"><i class="fa-solid fa-arrow-left mx-2"></i>Back to list</a>
+                    <a href="search-mentors.html" style="text-decoration: underline;">
+                        <i class="fa-solid fa-arrow-left mx-2"> </i>Back to list</a>
                     <form>
                         <div class="row mb-3">
                             <label for="name" class="col-sm-2 col-form-label">Name</label>
@@ -341,8 +342,30 @@
                         </div>
 
                         <div class="mb-5 text-center">
+                            <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                    Update Mentor
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Update Mentor</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                           Do you want to update information for Menor Hillary? 
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                                        <button type="button" class="btn btn-primary" onclick="location.href='admin.html'">Yes, update</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
                             <button type="button" class="btn btn-primary mx-2" onclick="location.href='admin.html'">Back to Dashboard</button>
-                            <button  type="button" class="btn btn-primary mx-2" onclick="updateMentor();">Update Mentor</button>
+                            <!-- <button  type="button" class="btn btn-primary mx-2" onclick="updateMentor();">Update Mentor</button> -->
                         </div>
                       
                     </form>
@@ -384,10 +407,10 @@
     <script src="js/main.js"></script>
 
     <script>
-      function updateMentor(){
-          alert("Successfully updated mentor information!");
-          location.href = "admin.html";
-      }
+       function updateMentor(){
+       
+        alert("Successfully updated mentor information!");
+       }
     </script>
 </body>
 
