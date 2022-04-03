@@ -176,23 +176,23 @@
   <div class="container pb-3 px-5 mt-3 mb-3" style="background-color: #f8f9fa;">
     <ul class="nav  nav-tabs nav-fill">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">OVERVIEW</a>
+        <a class="nav-link active" aria-current="page" onClick="openPage(event, 'overview')">OVERVIEW</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">INFORMATION FOR MENTORS</a>
+        <a class="nav-link" onClick="openPage(event, 'mentorInfo')">INFORMATION FOR MENTORS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">INFORMATION FOR MENTEES
+        <a class="nav-link" onClick="openPage(event, 'menteeInfo')">INFORMATION FOR MENTEES
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">TESTIMONIALS</a>
+        <a class="nav-link" onClick="openPage(event, 'testimonials')">TESTIMONIALS</a>
       </li>
     </ul>
 
   </div>
 
-  <div class="container pb-3 px-5 mt-3 mb-3" style="background-color: #f8f9fa;">
+  <div id="overview" class="container-info pb-3 px-5 mt-3 mb-3" style="background-color: #f8f9fa;">
      <div class="row  g-2">
        <div class="col-sm-8">
         <h3 style="text-align: left;">Description</h3>
@@ -247,6 +247,16 @@
       </div>
 
      </div>
+  </div>
+
+  <div id="mentorInfo" class="container-info pb-3 px-5 mt-3 mb-3" style="background-color: #f8f9fa;">
+    <h3>MentorInfo</h3>
+  </div>
+  <div id="menteeInfo" class="container-info pb-3 px-5 mt-3 mb-3" style="background-color: #f8f9fa;">
+    <h3>MenteeInfo</h3>
+  </div>
+  <div id="testimonials" class="container-info pb-3 px-5 mt-3 mb-3" style="background-color: #f8f9fa;">
+    <h3>Testimonials</h3>
   </div>
   
   <!-- <div class="container pb-3 px-5" id="searchBtnGroup" style="background-color:#00a8ea">
@@ -370,5 +380,20 @@
 <!--Bootstrap JS-->
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
  
+ <script>
+  function openPage(evt, option) {
+    var i, containerInfo, tablinks;
+    tabcontent = document.getElementsByClassName("container-info");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("nav-link");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(option).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  </script>
 </body>
 </html>
