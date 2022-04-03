@@ -10,15 +10,15 @@
     <link href="./css/myStyle.css" rel="stylesheet">
 
     <script src="./myJS.js"></script>
-    <title>Search</title>
+    <title>Home</title>
 </head>
 <body>
  
   <div class="container">
     <!--Navbar-->
-    <div style="background-color: #f8f9fa;">
+    
       <h1>Computing and IT Department</h1>
-    </div>
+   
    
     <nav class="navbar navbar-expand-lg sticky-top navbar-light  bg-light"> 
         <div class="container-fluid">
@@ -48,20 +48,9 @@
                   <li><a class="dropdown-item" href="#">New mentors</a></li>
                 </ul>
               </li>
-               <li class="nav-item">                                           
-                <a class="nav-link" href="#">Sessions</a>
-              </li>  
+               
 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Mentoring types
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Traditional mentoring</a></li>
-                  <li><a class="dropdown-item" href="#">Group mentoring</a></li>
-                  <li><a class="dropdown-item" href="#">Team mentoring</a></li>
-                </ul>
-              </li>
+            
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Training
@@ -71,7 +60,9 @@
                   <li><a class="dropdown-item" href="#">Mentee training</a></li>
                 </ul>
               </li>
-              
+              <li class="nav-item">                                           
+                <a class="nav-link" href="#">Testimonials</a>
+              </li>  
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Login
@@ -131,33 +122,133 @@
 
   <form class="d-flex mt-2">
     <input class="form-control me-2" type="search" placeholder=" " aria-label="Search">
-    <button type="button" class="btn  mx-3" id="searchBtn" >Search</button>
+    <button type="button" class="btn  mx-3" id="searchBtn" onclick="location.href='student-login.html'" >Search</button>
   </form>
 
   <div class="container pb-3 px-5  pt-2" id="searchfilter" style="background-color:#00a8ea">
 
-    <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3 mb-3 mt-2">
-      <div class="col">   
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Subject Code</option>
-          <option value="1">System Admin login</option>
-          <option value="2">Teacher login</option>
-          <option value="3">Student login</option>
-        </select>
-     </div>
-    <div class="col">   
-      <button class="btn" type="submit">JavaScript</button>
-  </div>
-  <div class="col">   
-    <button class="btn" type="submit">JavaScript</button>
-</div>
-<div class="col">   
-  <button class="btn" type="submit">JavaScript</button>
-</div>
+    <div class="row">
+       <div class="col-sm-4">   
+        <select class="form-select mt-3 mb-3" aria-label="Default select example">
+          <option selected>Choose subject name</option>
+          <option value="1">Information Systems in organisations (C) </option>
+          <option value="2">Communications and Teamwork (C) </option>
+          <option value="3">Business Requirements Analysis (C)</option>
+          <option value="4">Information Security  Management (Stage 2 E)</option>
+          <option value="5">Change Management  (Stage 2 E)</option>
+          <option value="6">Business Decision Analysis  (C)</option>
+          <option value="7">Database Design (C)</option>
+          <option value="8">Programming Web Services  (Stage 3 & 5 E)</option>
+          <option value="9">Business transformation and Innovation  (Stage 3 & 5 E)</option>
+          <option value="10">Big Data and Business Intelligence. (C)  </option>
+          <option value="11">Enterprise Cloud Computing  (C)  </option>
+          <option value="12">Project Management(C)</option>
+          <option value="13">Information Systems Support and Testing  (C)</option>
+          <option value="14">IS Project (C) </option>
+          <option value="15">Ethics and IT Governance  (C)</option>
+
+          </select>
+        </div>
+        <div class="col-sm-4">
+            <select class="form-select mt-3 mb-3" aria-label="Default select example">
+              <option selected>Choose avaliable day</option>
+              <option value="1">Monday </option>
+              <option value="2">Tuesday</option>
+              <option value="3">Wednesday</option>
+              <option value="4">Thurday</option>
+              <option value="5">Friday</option>
+          </select>
+        </div>
+        <div class="col-sm-4">
+            <select class="form-select mt-3 mb-3" aria-label="Default select example">
+                <option selected>Choose avaliable time</option>
+                <option value="1">9:00am - 5:00pm </option>
+                <option value="2">1:00pm - 5:00pm</option>
+                <option value="3">11:00am - 1:00pm</option>
+                <option value="4">1:00pm - 3:00pm</option>
+            </select>
+      </div>
     </div>
 
   </div>
 
+  <!--info for students-->
+  <div class="container pb-3 px-5 mt-3 mb-3" style="background-color: #f8f9fa;">
+    <ul class="nav  nav-tabs nav-fill">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">OVERVIEW</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">INFORMATION FOR MENTORS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">INFORMATION FOR MENTEES
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">TESTIMONIALS</a>
+      </li>
+    </ul>
+
+  </div>
+
+  <div class="container pb-3 px-5 mt-3 mb-3" style="background-color: #f8f9fa;">
+     <div class="row  g-2">
+       <div class="col-sm-8">
+        <h3 style="text-align: left;">Description</h3>
+        <p>
+          The purpose of mentoring is to tap into the existing knowledge, skills, and experience of senior or high performing students and transfer these skills to newer or less experienced students in order to advance their academic performance.
+        </p>
+        <h3 style="text-align: left;"> Types of Mentoring</h3>
+        <p>
+        
+          •	Traditional mentoring: One senior student to one junior student. <br>
+          •	Group mentoring: One senior student to up to four junior students.<br>
+          •	Team mentoring: Several senior students working with small groups of junior students in which the senior students to junior students’ ratio is not greater than 1:4.
+          
+        </p>
+
+        <h3 style="text-align: left;">Important Days</h3>
+        <table class="table table-striped" style="width:80%">
+          <tbody>
+            <tr>
+              <th> Menor applications open</th>
+              <td>Week 1 to week 3 every semester</td>
+            </tr>
+            <tr>
+              <th> Mentor applications close</th>
+              <td>Friday on week 3</td>
+            </tr>
+            <tr>
+              <th> Mentee applications open</th>
+              <td>Week 1 to week 3 every semester</td>
+            </tr>
+            <tr>
+              <th> Mentee applications open</th>
+              <td>Friday on week 3</td>
+            </tr>
+            <tr>
+              <th> Program commences</th>
+              <td>Week 4 every semester</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-sm-4">
+        <div class="card" >
+          <img src="img/session4.jpg" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title">Access Holmesglen Mentoring</h5>
+            <p class="card-text">Quick click to submit your application!</p>
+            <a href="#" class="btn btn-primary">Mentor Application</a> <br>
+            <a href="#" class="btn btn-primary mt-3">Mentee Application</a>
+          </div>
+        </div>
+      </div>
+
+     </div>
+  </div>
+  
   <!-- <div class="container pb-3 px-5" id="searchBtnGroup" style="background-color:#00a8ea">
     <p style="font-weight: bold; margin-top:15px; ">Popular searches</p>
     <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 mb-3">

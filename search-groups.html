@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Admin dashboard</title>
+    <title>Search for group</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -30,6 +30,11 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/table.css" rel="stylesheet">
+    <link href="https://unpkg.com/tabulator-tables@5.1.3/dist/css/tabulator.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.1.3/dist/js/tabulator.min.js"></script>
+
+
 </head>
 
 <body>
@@ -43,8 +48,8 @@
         <!-- Spinner End -->
 
 
-         <!-- Sidebar Start -->
-         <div class="sidebar pe-4 pb-3">
+        <!-- Sidebar Start -->
+        <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
                 <a href="admin.html" class="navbar-brand mt-3 mx-1 mb-3">
                    Student Mentoring System
@@ -139,182 +144,59 @@
             </nav>
             <!-- Navbar End -->
 
-               <!-- main content  -->
-               <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                    <div class="col-xl-6">
-                        <div class="bg-light rounded d-flex align-items-center  p-4">
-                            <i class="fa fa-book-open-reader fa-3x text-primary"></i>
-                           
-                            <div class="ms-3 px-lg-5">
-                               <a class="mb-2" href="search-mentors.html">Search for Mentors</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 ">
-                        <div class="bg-light rounded d-flex align-items-center p-4">
-                            <i class="fa fa-user-pen fa-3x text-primary"></i>
-                            <div class="ms-3 px-lg-5">
-                                <a class="mb-2"  href="#">Search for Mentees</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Mentor and Metee End -->
+             <!--Search for mentors-->
+             <div class="container-fluid pt-4 px-4">
 
-            <!-- Mentors -->
-            <div class="container-fluid pt-4 px-4">
+                <form class="d-none d-md-flex ms-4" >
+                    <input class="form-control border-1"  type="search" placeholder="Search">
+                    <button class="btn-primary mx-3" id="searchBtn" type="submit" style="width: 10%; border: none;">Search</button>
+                </form>
+            </div>
+            <div class="container-fluid pt-2 px-4">
                 <div class="bg-light text-center rounded p-4">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Mentors</h6>
-                        <a href="add-mentor.html" style="margin-left:70%">Add Mentor</a>
-                        <a href="search-mentors.html">Show All</a>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table text-start align-middle table-bordered table-hover mb-0">
-                            <thead>
-                                <tr class="text-dark">
-                                    <th scope="col">Id</th>
-                                    <th scope="col">Subject Name</th>
-                                    <th scope="col">Name</th>                              
-                                    <th scope="col">Available Day</th>
-                                    <th scope="col">Available Time</th>
-                                    <th scope="col">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>101</td>
-                                    <td>Information Systems in organisations</td>
-                                    <td>Hillary</td>
-                                    <td>Friday</td>
-                                    <td>1.00pm-5.00pm</td>
-                                    <td>
-                                        <a href="mentor-detail.html" class="link-primary mx-1" style="text-decoration: underline;">View</a>
-                                        <a href="edit-mentor.html" class="link-warning mx-1"  style="text-decoration: underline;">Edit</a>
-                                        <a href="delete-mentor.html" class="link-danger mx-1"mx-1 style="text-decoration: underline;">Delete</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>102</td>
-                                    <td>Information Systems in organisations</td>
-                                    <td>Rimple</td>
-                                    <td>Tuesday,Thursday,Friday</td>
-                                    <td>1.00pm-5.00pm</td>
-                                    <td>
-                                        <a href="mentor-detail.html" class="link-primary mx-1" style="text-decoration: underline;">View</a>
-                                        <a href="edit-mentor.html" class="link-warning mx-1"  style="text-decoration: underline;">Edit</a>
-                                        <a href="delete-mentor.html" class="link-danger mx-1"mx-1 style="text-decoration: underline;">Delete</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>103</td>
-                                    <td>Information Systems in organisations</td>
-                                    <td>Maxine</td>
-                                    <td>Wednesday,Friday</td>
-                                    <td>1.00pm-5.00pm</td>
-                                    <td>
-                                        <a href="mentor-detail.html" class="link-primary mx-1" style="text-decoration: underline;">View</a>
-                                        <a href="edit-mentor.html" class="link-warning mx-1"  style="text-decoration: underline;">Edit</a>
-                                        <a href="delete-mentor.html" class="link-danger mx-1"mx-1 style="text-decoration: underline;">Delete</a>
-                                    </td>
-                                </tr>                             
-                                <tr>
-                                    <td>104</td>
-                                    <td>Information Systems in organisations</td>
-                                    <td>Nalinda</td>
-                                    <td>Wednesday</td>
-                                    <td>11.00am-1.00pm</td>
-                                    <td>
-                                        <a href="mentor-detail.html" class="link-primary mx-1" style="text-decoration: underline;">View</a>
-                                        <a href="edit-mentor.html" class="link-warning mx-1"  style="text-decoration: underline;">Edit</a>
-                                        <a href="delete-mentor.html" class="link-danger mx-1"mx-1 style="text-decoration: underline;">Delete</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <div class="row">
+                       
+                        <div class="col-sm-6 ">
+                            <select class="form-select mb-3" aria-label="Default select example">
+                                <option selected>Choose subject name</option>
+                                <option value="1">Information Systems in organisations (C) </option>
+                                <option value="2">Communications and Teamwork (C) </option>
+                                <option value="3">Business Requirements Analysis (C)</option>
+                                <option value="4">Information Security  Management (Stage 2 E)</option>
+                                <option value="5">Change Management  (Stage 2 E)</option>
+                                <option value="6">Business Decision Analysis  (C)</option>
+                                <option value="7">Database Design (C)</option>
+                                <option value="8">Programming Web Services  (Stage 3 & 5 E)</option>
+                                <option value="9">Business transformation and Innovation  (Stage 3 & 5 E)</option>
+                                <option value="10">Big Data and Business Intelligence. (C)  </option>
+                                <option value="11">Enterprise Cloud Computing  (C)  </option>
+                                <option value="12">Project Management(C)</option>
+                                <option value="13">Information Systems Support and Testing  (C)</option>
+                                <option value="14">IS Project (C) </option>
+                                <option value="15">Ethics and IT Governance  (C)</option>
+
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <select class="form-select mb-3" aria-label="Default select example">
+                                <option selected>Choose Mentor</option>
+                                <option value="1">Hillary </option>
+                                <option value="2">Rimple</option>
+                                <option value="3">Maxine</option>
+                                <option value="4">Nalinda</option>
+                                <option value="5">Himanshu</option>
+                            </select>
+                        </div>
+                      
+                   </div>
                 </div>
             </div>
+
             <!-- mentors -->
-
-            <!-- Mentees -->
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-light text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Mentees</h6>
-                        <a href="add-mentee.html" style="margin-left:70%">Add Mentee</a>
-                        <a href="">Show All</a>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table text-start align-middle table-bordered table-hover mb-0">
-                            <thead>
-                                <tr class="text-dark">
-                                    <th scope="col">Id</th>
-                                    <th scope="col">Subject Name</th>
-                                    <th scope="col">Mentee Name</th>
-                                    <th scope="col">Match Mentor</th>
-                                    <th scope="col">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>201</td>
-                                    <td>Information Systems in organisations</td>
-                                    <td>Jack Smith</td>
-                                    <td>Yes</td>
-                                    <td>
-                                        <a href="mentee-detail.html" class="link-primary mx-1" style="text-decoration: underline;">View</a>
-                                        <a href="edit-mentee.html" class="link-warning mx-1"  style="text-decoration: underline;">Edit</a>
-                                        <a href="delete-mentee.html" class="link-danger mx-1"mx-1 style="text-decoration: underline;">Delete</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>202</td>
-                                    <td>Information Systems in organisations</td>
-                                    <td>Oliver Willson</td>
-                                    <td>No</td>
-                                    <td>
-                                        <a href="mentee-detail.html" class="link-primary mx-1" style="text-decoration: underline;">View</a>
-                                        <a href="edit-mentee.html" class="link-warning mx-1"  style="text-decoration: underline;">Edit</a>
-                                        <a href="delete-mentee.html" class="link-danger mx-1"mx-1 style="text-decoration: underline;">Delete</a>
-                                    </td>
-                                    <tr>
-                                        <td>203</td>
-                                        <td>Communications and Teamwork</td>
-                                        <td>Logan Waters</td>
-                                        <td>Yes</td>
-                                        <td>
-                                            <a href="mentee-detail.html" class="link-primary mx-1" style="text-decoration: underline;">View</a>
-                                            <a href="edit-mentee.html" class="link-warning mx-1"  style="text-decoration: underline;">Edit</a>
-                                            <a href="delete-mentee.html" class="link-danger mx-1"mx-1 style="text-decoration: underline;">Delete</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>204</td>
-                                        <td>Business Requirements Analysis</td>
-                                        <td>Henley Westwood</td>
-                                        <td>Yes</td>
-                                        <td>
-                                            <a href="mentee-detail.html" class="link-primary mx-1" style="text-decoration: underline;">View</a>
-                                            <a href="edit-mentee.html" class="link-warning mx-1"  style="text-decoration: underline;">Edit</a>
-                                            <a href="delete-mentee.html" class="link-danger mx-1"mx-1 style="text-decoration: underline;">Delete</a>
-                                        </td>
-                                    </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <!-- Groups -->
-
-            <div class="container-fluid pt-4 px-4">
-                <div class="bg-light text-center rounded p-4">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Groups</h6>
-                        <a href="add-group.html" style="margin-left:70%">Add Group</a>
-                        <a href="">Show All</a>
+                        <h6 class="mb-0">Search result</h6>
                     </div>
                     <div class="table-responsive">
                         <table class="table text-start align-middle table-bordered table-hover mb-0">
@@ -330,7 +212,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>301</td>
+                                    <td>195</td>
                                     <td>Hillary</td>
                                     <td>	Information Systems in organisations</td>
                                     <td>Jack Smith</td>
@@ -346,7 +228,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                  <td>302</td>
+                                  <td>195</td>
                                   <td>Rimple</td>
                                   <td>Communications and Teamwork</td>
                                   <td>Logan Waters</td>
@@ -362,7 +244,7 @@
                                 </td>
                                 </tr>
                                 <tr>
-                                    <td>303</td>
+                                    <td>195</td>
                                     <td>Maxine</td>
                                     <td>Business Requirements Analysis</td>
                                     <td>Henley Westwood</td>
@@ -378,7 +260,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                  <td>304</td>
+                                  <td>195</td>
                                   <td>Maxine</td>
                                   <td>Database Design</td>
                                   <td>Jason Wang</td>
@@ -398,9 +280,30 @@
                         </table>
                     </div>
                 </div>
+               
             </div>
+            
 
-          
+            <!-- <div class="container-fluid pt-4 px-4" >
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                    </ul>
+                </nav>
+            </div> -->
+
             <!-- Footer Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-light rounded-top p-4">
@@ -431,9 +334,11 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.0.5/dist/js/tabulator.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/table.js"></script>
 </body>
 
 </html>

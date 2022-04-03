@@ -139,10 +139,66 @@
                 </div>
             </nav>
             <!-- Navbar End -->
-            <div class="container-fluid pt-4 px-4">
-
-            <div id="example-table"></div>
-            </div>
+           
+            <!--add subject-->
+            <div class="container-fluid pt-4 px-4"> 
+                <div class="bg-light rounded h-100 p-4">
+                    <h6 class="mb-4">Add New Subject</h6>
+                    <a href="search-mentors.html" style="text-decoration: underline;">
+                        <i class="fa-solid fa-arrow-left mx-2"></i>
+                        Back to list
+                    </a>
+                    <form>
+                       
+                        <div class="row mb-3">
+                            <label for="subject-code" class="col-sm-2 col-form-label">Subject Code</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="subject-code">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="subject-name" class="col-sm-2 col-form-label">Subject Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="subject-name">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="lecture" class="col-sm-2 col-form-label">Lecture</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="lecture">
+                            </div>
+                        </div>
+                       
+                        <div class="mb-5 text-center">
+                             <!-- Button trigger modal -->
+                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                Add Subject
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Add Subject</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                        Do you want to submit? 
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                                        <button type="button" class="btn btn-primary" onclick="location.href='subject.html'">Yes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            <button type="button" class="btn btn-primary mx-2" onclick="location.href='admin.html';">Back to Dashboard</button>
+                        </div>
+                    </form>
+                </div>
+        </div>
+          
 
 
             <!-- Footer Start -->

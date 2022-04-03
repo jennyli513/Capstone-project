@@ -131,7 +131,7 @@ h1,h2,h3,h5
     color: black;
 }
 /* button on mentor card and event cards */
-/* .card a{
+ .card a{
     background-color:#facc19;
     border: 1px azure;
     color: black;
@@ -141,7 +141,7 @@ h1,h2,h3,h5
     background-color:  #00a8ea;
     color:white;
    
-} */ 
+}  
 
 
 .navbar button
