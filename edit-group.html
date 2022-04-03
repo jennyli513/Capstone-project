@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Edit group</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/92942b784e.js" crossorigin="anonymous"></script>
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+  
+</head>
+
+<body>
+    <div class="container-xxl position-relative bg-white d-flex p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Sidebar Start -->
+          <div class="sidebar pe-4 pb-3">
+            <nav class="navbar bg-light navbar-light">
+                <a href="admin.html" class="navbar-brand mt-3 mx-1 mb-3">
+                   Student Mentoring System
+                </a>
+                <div class="d-flex align-items-center mt-4 ms-4 mb-4">
+                    <div class="position-relative">
+                        <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="mb-0">Jhon Doe</h6>
+                        <span>Project Manager</span>
+                    </div>
+                </div>
+                <div class="navbar-nav w-100">
+                    <a href="admin.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+               
+                    <div class="nav-item dropdown">
+                      <a href="search-mentors.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-book-open-reader me-2"></i>Mentors</a>
+                      <div class="dropdown-menu bg-transparent border-0">
+                          <a href="search-mentors.html" class="dropdown-item">Search for Mentors</a>
+                          <a href="add-mentor.html" class="dropdown-item">Add New Mentors</a>
+                      </div>
+                   </div>
+                   <div class="nav-item dropdown">
+                    <a href="search-mentees.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-user-pen me-2"></i>Mentees</a>
+                    <div class="dropdown-menu bg-transparent border-0">
+                        <a href="search-mentees.html" class="dropdown-item">Search for Mentees</a>
+                        <a href="add-mentor.html" class="dropdown-item">Add New Mentees</a>
+                    </div>
+                   </div>
+                
+                   <div class="nav-item dropdown">
+                    <a href="search-groups.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">  <i class="fa fa-handshake me-2"></i>Groups</a>
+                    <div class="dropdown-menu bg-transparent border-0">
+                        <a href="search-groups.html" class="dropdown-item">Search for Groups</a>
+                        <a href="add-group.html" class="dropdown-item">Add New Group</a>
+                    </div>
+                   </div>
+                  
+                    <a href="subject.html"class="nav-item nav-link"><i class="fa fa-laptop me-2"></i>Subjects</a>
+                    <a href="myprofile.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>My Profile</a>
+                    <a href="logout.html" class="nav-item nav-link"><i class="fa fa-arrow-right-from-bracket me-2"></i></i>Log out</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Sidebar End -->
+      
+
+        <!-- Content Start -->
+        <div class="content">
+            <!-- Navbar Start -->
+            <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+                <a href="admin.html" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
+                </a>
+                <a href="#" class="sidebar-toggler flex-shrink-0">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <!-- <form class="d-none d-md-flex ms-4">
+                    <input class="form-control border-0" type="search" placeholder="Search">
+                </form> -->
+                <div class="navbar-nav align-items-center ms-auto">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fa fa-bell me-lg-2"></i>
+                            <span class="d-none d-lg-inline-flex">Notificatin</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                            <a href="mentor-application" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">Mentor application</h6>
+                                <small>15 minutes ago</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="mentee-application" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">Mentee application</h6>
+                                <small>15 minutes ago</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item text-center">See all notifications</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <img class="rounded-circle me-lg-2" src="./img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                            <span class="d-none d-lg-inline-flex">John Doe</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                            <a href="myprofile.html" class="dropdown-item">My Profile</a>
+                            <a href="logout.html" class="dropdown-item">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Navbar End -->
+            
+            <!--edit group-->
+            <div class="container-fluid pt-4 px-4"> 
+                <div class="bg-light rounded h-100 p-4">
+                    <h6 class="mb-4">Edit Group</h6>
+                    <a href="search-group.html" style="text-decoration: underline;">
+                        <i class="fa-solid fa-arrow-left mx-2"></i>
+                        Back to list
+                    </a>
+                    <form>
+                        <div class="row mb-3">
+                            <label for="subject" class="col-sm-2 col-form-label">Subject Name</label>
+                            <div class="col-sm-10">
+                                    <select class="form-select" aria-label="suject-select" >
+                                        <option selected>Select subject</option>
+                                        <option value="1" selected >Information Systems in organisations (C)</option>
+                                        <option value="2">Communications and Teamwork (C)</option>
+                                        <option value="3">Business Requirements Analysis (C)</option>
+                                        <option value="4">Information Security Management (Stage 2 E)</option>
+                                        <option value="5">Change Management (Stage 2 E)</option>
+                                        <option value="6">Business Decision Analysis (C)</option>
+                                        <option value="7">Database Design (C)</option>
+                                        <option value="8">Programming Web Services (Stage 3 & 5 E)</option>
+                                        <option value="9">Business transformation and Innovation (Stage 3 & 5 E)</option>
+                                        <option value="10">Big Data and Business Intelligence. (C)</option>
+                                        <option value="11">Enterprise Cloud Computing (C)</option>
+                                        <option value="12">Project Management(C)</option>
+                                        <option value="13">Information Systems Support and Testing (C)</option>
+                                        <option value="14">IS Project (C)</option>
+                                        <option value="15">Ethics and IT Governance (C)</option>
+                                      </select>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="mentor-name" class="col-sm-2 col-form-label">Mentor Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="mentor-name" value="Hillary">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="mentee-name" class="col-sm-2 col-form-label">Mentee Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="mentee-name" value="Jack Smith">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="start-date" class="col-sm-2 col-form-label">Mentoring start</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="start-date" name="start-date" value="04/03/2022">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="end-date" class="col-sm-2 col-form-label">Mentoring end</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="start-date" name="end-date" value="07/06/2020">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="end-date" class="col-sm-2 col-form-label">Progress</label>
+                            <div class="col-sm-10">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%
+                                    </div>
+                                </div>
+                           </div>
+                           <label for="end-date" class="col-sm-2 col-form-label"></label>
+                           <div class="col-sm-10" style="height:200px;overflow-y:auto">
+
+                            <div class="table-content">
+                                <table class="table table-borded table-responsive table-striped " id="table-list">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <td>Name</td>
+                                            <td>Gental</td>
+                                            <td>eMail</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>James</td>
+                                            <td>Male</td>
+                                            <td>jhsdfgh@hotmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sams</td>
+                                            <td>Male</td>
+                                            <td>hhfdfg@hotmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mary</td>
+                                            <td>Female</td>
+                                            <td>vccch@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ashly</td>
+                                            <td>Female</td>
+                                            <td>asss@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Eden</td>
+                                            <td>Male</td>
+                                            <td>edd@hotmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Daisy</td>
+                                            <td>Female</td>
+                                            <td>hhdf@gmail.com</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <button class="btn btn-info" id="add"><span class="glyphicon glyphicon-plus-sign"></span>Add New Members</button>
+                            </div>
+                            <!-- <table class="table-editable">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Week</th>
+                                    <th scope="col" style="width:30%">Task</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Start Time</th>
+                                    <th scope="col">Finish Time</th>   
+                                    <th scope="col">Status</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>Confirm with mentee about the area he wants to improve</td>
+                                    <td>04/03/2022</td>
+                                    <td>1:00pm</td>
+                                    <td>1:30pm</td>
+                                    <td><i class="fa-solid fa-check"></i></td>
+                                   
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td>Discuss assessment </td>
+                                    <td>11/03/2022</td>
+                                    <td>1:00pm</td>
+                                    <td>2:00pm</td>
+                                    <td><i class="fa-solid fa-check"></i></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>Assign task to mentee</td>
+                                    <td>18/03/2022</td>
+                                    <td>1:00pm</td>
+                                    <td>2:00pm</td>
+                                    <td><i class="fa-solid fa-check"></i></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">4</th>
+                                    <td>Assign task to mentee</td>
+                                    <td>25/03/2022</td>
+                                    <td>1:00pm</td>
+                                    <td>1:30pm</td>
+                                    <td><i class="fa-solid fa-check"></i></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">5</th>
+                                    <td>Assign task to mentee</td>
+                                    <td>01/04/2022</td>
+                                    <td>1:00pm</td>
+                                    <td>1:30pm</td>
+                                    <td><i class="fa-solid fa-hourglass"></i></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">6</th>
+                                    <td></td>
+                                    <td>08/04/2022</td>
+                                    <td>1:00pm</td>
+                                    <td>1:30pm</td>
+                                    <td></td>
+                                  </tr>
+                                </tbody>
+                              </table> -->
+                           </div>
+                        </div>
+                        <div class="row mb-3" id="comment">
+                            <label for="comment" class="col-sm-2 col-form-label">Comment</label>
+                            <div class="col-sm-10 mb-3">
+                                <textarea class="form-control" value="•	Virtual mentoring- Via Webex platform" id="floatingTextarea"></textarea>
+                            </div>     
+                        </div>
+
+                        <div class="mb-5 text-center">
+                             <!-- Button trigger modal -->
+                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                Add Group
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Add Group</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                        Do you want to submit? 
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                                        <button type="button" class="btn btn-primary" onclick="location.href='admin.html'">Yes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            <button type="button" class="btn btn-primary mx-2" onclick="location.href='admin.html';">Back to Dashboard</button>
+                        </div>
+                    </form>
+                </div>
+        </div>
+
+            <!-- Footer Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-light rounded-top p-4">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 text-center text-sm-start">
+                            &copy; <a href="#">Student Mentoring System</a>, All Right Reserved. 
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
+        </div>
+        <!-- Content End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/chart/chart.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        //bootstable.js
+/*
+Bootstable
+ @description  Javascript library to make HMTL tables editable, using Bootstrap
+ @version 1.1
+ @autor Tito Hinostroza
+*/
+  "use strict";
+  //Global variables
+  var params = null;  		//Parameters
+  var colsEdi =null;
+  var newColHtml = '<div class="btn-group pull-right">'+
+'<button id="bEdit" type="button" class="btn btn-sm btn-default" onclick="rowEdit(this);">' +
+'<span class="glyphicon glyphicon-pencil" > </span>'+
+'</button>'+
+'<button id="bElim" type="button" class="btn btn-sm btn-default" onclick="rowElim(this);">' +
+'<span class="glyphicon glyphicon-trash" > </span>'+
+'</button>'+
+'<button id="bAcep" type="button" class="btn btn-sm btn-default" style="display:none;" onclick="rowAcep(this);">' + 
+'<span class="glyphicon glyphicon-ok" > </span>'+
+'</button>'+
+'<button id="bCanc" type="button" class="btn btn-sm btn-default" style="display:none;" onclick="rowCancel(this);">' + 
+'<span class="glyphicon glyphicon-remove" > </span>'+
+'</button>'+
+    '</div>';
+  var colEdicHtml = '<td name="buttons">'+newColHtml+'</td>'; 
+    
+  $.fn.SetEditable = function (options) {
+    var defaults = {
+        columnsEd: null,         //Index to editable columns. If null all td editables. Ex.: "1,2,3,4,5"
+        $addButton: null,        //Jquery object of "Add" button
+        onEdit: function() {},   //Called after edition
+		onBeforeDelete: function() {}, //Called before deletion
+        onDelete: function() {}, //Called after deletion
+        onAdd: function() {}     //Called when added a new row
+    };
+    params = $.extend(defaults, options);
+    this.find('thead tr').append('<td name="buttons"><span class="glyphicon glyphicon-thumbs-up"></span></td>');  //encabezado vacío
+    this.find('tbody tr').append(colEdicHtml);
+	var $tabedi = this;   //Read reference to the current table, to resolve "this" here.
+    //Process "addButton" parameter
+    if (params.$addButton != null) {
+        //Se proporcionó parámetro
+        params.$addButton.click(function() {
+            rowAddNew($tabedi.attr("id"));
+        });
+    }
+    //Process "columnsEd" parameter
+    if (params.columnsEd != null) {
+        //Extract felds
+        colsEdi = params.columnsEd.split(',');
+    }
+  };
+function IterarCamposEdit($cols, tarea) {
+//Itera por los campos editables de una fila
+    var n = 0;
+    $cols.each(function() {
+        n++;
+        if ($(this).attr('name')=='buttons') return;  //excluye columna de botones
+        if (!EsEditable(n-1)) return;   //noe s campo editable
+        tarea($(this));
+    });
+    
+    function EsEditable(idx) {
+    //Indica si la columna pasada está configurada para ser editable
+        if (colsEdi==null) {  //no se definió
+            return true;  //todas son editable
+        } else {  //hay filtro de campos
+//alert('verificando: ' + idx);
+            for (var i = 0; i < colsEdi.length; i++) {
+              if (idx == colsEdi[i]) return true;
+            }
+            return false;  //no se encontró
+        }
+    }
+}
+function FijModoNormal(but) {
+    $(but).parent().find('#bAcep').hide();
+    $(but).parent().find('#bCanc').hide();
+    $(but).parent().find('#bEdit').show();
+    $(but).parent().find('#bElim').show();
+    var $row = $(but).parents('tr');  //accede a la fila
+    $row.attr('id', '');  //quita marca
+}
+function FijModoEdit(but) {
+    $(but).parent().find('#bAcep').show();
+    $(but).parent().find('#bCanc').show();
+    $(but).parent().find('#bEdit').hide();
+    $(but).parent().find('#bElim').hide();
+    var $row = $(but).parents('tr');  //accede a la fila
+    $row.attr('id', 'editing');  //indica que está en edición
+}
+function ModoEdicion($row) {
+    if ($row.attr('id')=='editing') {
+        return true;
+    } else {
+        return false;
+    }
+}
+function rowAcep(but) {
+//Acepta los cambios de la edición
+    var $row = $(but).parents('tr');  //accede a la fila
+    var $cols = $row.find('td');  //lee campos
+    if (!ModoEdicion($row)) return;  //Ya está en edición
+    //Está en edición. Hay que finalizar la edición
+    IterarCamposEdit($cols, function($td) {  //itera por la columnas
+      var cont = $td.find('input').val(); //lee contenido del input
+      $td.html(cont);  //fija contenido y elimina controles
+    });
+    FijModoNormal(but);
+    params.onEdit($row);
+}
+function rowCancel(but) {
+//Rechaza los cambios de la edición
+    var $row = $(but).parents('tr');  //accede a la fila
+    var $cols = $row.find('td');  //lee campos
+    if (!ModoEdicion($row)) return;  //Ya está en edición
+    //Está en edición. Hay que finalizar la edición
+    IterarCamposEdit($cols, function($td) {  //itera por la columnas
+        var cont = $td.find('div').html(); //lee contenido del div
+        $td.html(cont);  //fija contenido y elimina controles
+    });
+    FijModoNormal(but);
+}
+function rowEdit(but) {  //Inicia la edición de una fila
+    var $row = $(but).parents('tr');  //accede a la fila
+    var $cols = $row.find('td');  //lee campos
+    if (ModoEdicion($row)) return;  //Ya está en edición
+    //Pone en modo de edición
+    IterarCamposEdit($cols, function($td) {  //itera por la columnas
+        var cont = $td.html(); //lee contenido
+        var div = '<div style="display: none;">' + cont + '</div>';  //guarda contenido
+        var input = '<input class="form-control input-sm"  value="' + cont + '">';
+        $td.html(div + input);  //fija contenido
+    });
+    FijModoEdit(but);
+}
+function rowElim(but) {  //Elimina la fila actual
+    var $row = $(but).parents('tr');  //accede a la fila
+    params.onBeforeDelete($row);
+    $row.remove();
+    params.onDelete();
+}
+function rowAddNew(tabId) {  //Agrega fila a la tabla indicada.
+var $tab_en_edic = $("#" + tabId);  //Table to edit
+    var $filas = $tab_en_edic.find('tbody tr');
+    if ($filas.length==0) {
+        //No hay filas de datos. Hay que crearlas completas
+        var $row = $tab_en_edic.find('thead tr');  //encabezado
+        var $cols = $row.find('th');  //lee campos
+        //construye html
+        var htmlDat = '';
+        $cols.each(function() {
+            if ($(this).attr('name')=='buttons') {
+                //Es columna de botones
+                htmlDat = htmlDat + colEdicHtml;  //agrega botones
+            } else {
+                htmlDat = htmlDat + '<td></td>';
+            }
+        });
+        $tab_en_edic.find('tbody').append('<tr>'+htmlDat+'</tr>');
+    } else {
+        //Hay otras filas, podemos clonar la última fila, para copiar los botones
+        var $ultFila = $tab_en_edic.find('tr:last');
+        $ultFila.clone().appendTo($ultFila.parent());  
+        $ultFila = $tab_en_edic.find('tr:last');
+        var $cols = $ultFila.find('td');  //lee campos
+        $cols.each(function() {
+            if ($(this).attr('name')=='buttons') {
+                //Es columna de botones
+            } else {
+                $(this).html('');  //limpia contenido
+            }
+        });
+    }
+	params.onAdd();
+}
+function TableToCSV(tabId, separator) {  //Convierte tabla a CSV
+    var datFil = '';
+    var tmp = '';
+	var $tab_en_edic = $("#" + tabId);  //Table source
+    $tab_en_edic.find('tbody tr').each(function() {
+        //Termina la edición si es que existe
+        if (ModoEdicion($(this))) {
+            $(this).find('#bAcep').click();  //acepta edición
+        }
+        var $cols = $(this).find('td');  //lee campos
+        datFil = '';
+        $cols.each(function() {
+            if ($(this).attr('name')=='buttons') {
+                //Es columna de botones
+            } else {
+                datFil = datFil + $(this).html() + separator;
+            }
+        });
+        if (datFil!='') {
+            datFil = datFil.substr(0, datFil.length-separator.length); 
+        }
+        tmp = tmp + datFil + '\n';
+    });
+    return tmp;
+}
+
+//apply
+$("#table-list").SetEditable({
+        $addButton: $('#add')
+    });
+    </script>
+   
+</body>
+
+</html>

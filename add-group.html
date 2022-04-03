@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>DASHMIN - Bootstrap Admin Template</title>
+    <title>Add group</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -133,14 +133,105 @@
                 </div>
             </nav>
             <!-- Navbar End -->
-            <div class="container-fluid pt-4 px-4">
+          
+            <!--Add group-->
+            <div class="container-fluid pt-4 px-4"> 
+                <div class="bg-light rounded h-100 p-4">
+                    <h6 class="mb-4">Add New Group</h6>
+                    <a href="search-mentors.html" style="text-decoration: underline;">
+                        <i class="fa-solid fa-arrow-left mx-2"></i>
+                        Back to list
+                    </a>
+                    <form>
+                        <div class="row mb-3">
+                            <label for="Subject" class="col-sm-2 col-form-label">Subject Name</label>
+                            <div class="col-sm-10">
+                                <select class="form-select" aria-label="suject-select">
+                                    <option selected>Select subject</option>
+                                    <option value="1">Information Systems in organisations (C)</option>
+                                    <option value="2">Communications and Teamwork (C)</option>
+                                    <option value="3">Business Requirements Analysis (C)</option>
+                                    <option value="4">Information Security Management (Stage 2 E)</option>
+                                    <option value="5">Change Management (Stage 2 E)</option>
+                                    <option value="6">Business Decision Analysis (C)</option>
+                                    <option value="7">Database Design (C)</option>
+                                    <option value="8">Programming Web Services (Stage 3 & 5 E)</option>
+                                    <option value="9">Business transformation and Innovation (Stage 3 & 5 E)</option>
+                                    <option value="10">Big Data and Business Intelligence. (C)</option>
+                                    <option value="11">Enterprise Cloud Computing (C)</option>
+                                    <option value="12">Project Management(C)</option>
+                                    <option value="13">Information Systems Support and Testing (C)</option>
+                                    <option value="14">IS Project (C)</option>
+                                    <option value="15">Ethics and IT Governance (C)</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="mentor-name" class="col-sm-2 col-form-label">Mentor Name</label>
+                            <div class="col-sm-10">
+                                <input type="mentor-name" class="form-control" id="mentor-name">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="mentee-name" class="col-sm-2 col-form-label">Mentee Name</label>
+                            <div class="col-sm-10">
+                                <input type="mentee-name" class="form-control" id="mentee-name">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="start-date" class="col-sm-2 col-form-label">Mentoring start</label>
+                            <div class="col-sm-10">
+                                <input type="date" class="form-control" id="start-date" name="start-date">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="end-date" class="col-sm-2 col-form-label">Mentoring end</label>
+                            <div class="col-sm-10">
+                                <input type="date" class="form-control" id="start-date" name="end-date">
+                            </div>
+                        </div>
+                        <div class="row mb-3" id="comment">
+                            <label for="comment" class="col-sm-2 col-form-label">Comment</label>
+                            <div class="col-sm-10 mb-3">
+                                <textarea class="form-control" placeholder="Wrirte comment here" id="floatingTextarea"></textarea>
+                            </div>
+                           
+                        </div>
 
-            <div id="example-table"></div>
-            </div>
+                        <div class="mb-5 text-center">
+                             <!-- Button trigger modal -->
+                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                Add Group
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Add Group</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                        Do you want to submit? 
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                                        <button type="button" class="btn btn-primary" onclick="location.href='admin.html'">Yes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            <button type="button" class="btn btn-primary mx-2" onclick="location.href='admin.html';">Back to Dashboard</button>
+                        </div>
+                    </form>
+                </div>
+        </div>
+          
 
 
             <!-- Footer Start -->
-            <div class="container-fluid pt-4 px-4">
+            <div class="container-fluid pt-4 px-4" id="footer">
                 <div class="bg-light rounded-top p-4">
                     <div class="row">
                         <div class="col-12 col-sm-6 text-center text-sm-start">
