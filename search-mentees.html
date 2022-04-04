@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>DASHMIN - Bootstrap Admin Template</title>
+    <title>Search mentees</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -139,67 +139,132 @@
                 </div>
             </nav>
             <!-- Navbar End -->
-           
-            <!--add subject-->
-            <div class="container-fluid pt-4 px-4"> 
-                <div class="bg-light rounded h-100 p-4">
-                    <h6 class="mb-4">Add New Subject</h6>
-                    <a href="search-mentors.html" style="text-decoration: underline;">
-                        <i class="fa-solid fa-arrow-left mx-2"></i>
-                        Back to list
-                    </a>
-                    <form>
-                       
-                        <div class="row mb-3">
-                            <label for="subject-code" class="col-sm-2 col-form-label">Subject Code</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="subject-code">
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="subject-name" class="col-sm-2 col-form-label">Subject Name</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="subject-name">
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="lecture" class="col-sm-2 col-form-label">Lecture</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="lecture">
-                            </div>
-                        </div>
-                       
-                        <div class="mb-5 text-center">
-                             <!-- Button trigger modal -->
-                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                Add Subject
-                            </button>
-                            <!-- Modal -->
-                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                        <h5 class="modal-title" id="staticBackdropLabel">Add Subject</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                        Do you want to submit? 
-                                        </div>
-                                        <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                                        <button type="button" class="btn btn-primary" onclick="location.href='subject.html'">Yes</button>
-                                        </div>
-                                    </div>
-                                </div>
-                               
-                            </div>
-                            <button type="button" class="btn btn-primary mx-2" onclick="location.href='admin.html';">Back to Dashboard</button>
-                        </div>
-                    </form>
-                </div>
-        </div>
-          
+            <div class="container-fluid pt-4 px-4">
 
+                <form class="d-none d-md-flex ms-4" >
+                    <input class="form-control border-1"  type="search" placeholder="Search">
+                    <button class="btn-primary mx-3" id="searchBtn" type="submit" style="width: 10%; border: none;">Search</button>
+                </form>
+            </div>
+            <div class="container-fluid pt-2 px-4">
+                <div class="bg-light text-center rounded p-4">
+                    <div class="row">
+                       
+                        <div class="col-sm-6 ">
+                            <select class="form-select mb-3" aria-label="Default select example">
+                                <option selected>Choose subject name</option>
+                                <option value="1">Information Systems in organisations (C) </option>
+                                <option value="2">Communications and Teamwork (C) </option>
+                                <option value="3">Business Requirements Analysis (C)</option>
+                                <option value="4">Information Security  Management (Stage 2 E)</option>
+                                <option value="5">Change Management  (Stage 2 E)</option>
+                                <option value="6">Business Decision Analysis  (C)</option>
+                                <option value="7">Database Design (C)</option>
+                                <option value="8">Programming Web Services  (Stage 3 & 5 E)</option>
+                                <option value="9">Business transformation and Innovation  (Stage 3 & 5 E)</option>
+                                <option value="10">Big Data and Business Intelligence. (C)  </option>
+                                <option value="11">Enterprise Cloud Computing  (C)  </option>
+                                <option value="12">Project Management(C)</option>
+                                <option value="13">Information Systems Support and Testing  (C)</option>
+                                <option value="14">IS Project (C) </option>
+                                <option value="15">Ethics and IT Governance  (C)</option>
+
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                        </div>     
+                   </div>
+                </div>
+            </div>
+
+            <div class="container-fluid pt-2 px-4">
+                <div class="bg-light text-center rounded p-4">
+                    <div class="table-responsive">
+                        <table class="table text-start align-middle table-bordered table-hover mb-0">
+                            <thead>
+                                <tr class="text-dark">
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Subject Name</th>
+                                    <th scope="col">Mentee Name</th>
+                                 
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>201</td>
+                                    <td>Information Systems in organisations</td>
+                                    <td>Jack Smith</td>
+                             
+                                    <td>
+                                        <a href="mentee-detail.html" class="link-primary mx-1" style="text-decoration: underline;">View</a>
+                                        <a href="edit-mentee.html" class="link-warning mx-1"  style="text-decoration: underline;">Edit</a>
+                                        <a href="delete-mentee.html" class="link-danger mx-1"mx-1 style="text-decoration: underline;">Delete</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>202</td>
+                                    <td>Information Systems in organisations</td>
+                                    <td>Oliver Willson</td>
+                 
+                                    <td>
+                                        <a href="mentee-detail.html" class="link-primary mx-1" style="text-decoration: underline;">View</a>
+                                        <a href="edit-mentee.html" class="link-warning mx-1"  style="text-decoration: underline;">Edit</a>
+                                        <a href="delete-mentee.html" class="link-danger mx-1"mx-1 style="text-decoration: underline;">Delete</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>203</td>
+                                    <td>Information Systems in organisations</td>
+                                    <td>James Willson</td>
+                 
+                                    <td>
+                                        <a href="mentee-detail.html" class="link-primary mx-1" style="text-decoration: underline;">View</a>
+                                        <a href="edit-mentee.html" class="link-warning mx-1"  style="text-decoration: underline;">Edit</a>
+                                        <a href="delete-mentee.html" class="link-danger mx-1"mx-1 style="text-decoration: underline;">Delete</a>
+                                    </td>
+                                </tr>
+                                
+                                    <tr>
+                                        <td>204</td>
+                                        <td>Communications and Teamwork</td>
+                                        <td>Logan Waters</td>
+                                      
+                                        <td>
+                                            <a href="mentee-detail.html" class="link-primary mx-1" style="text-decoration: underline;">View</a>
+                                            <a href="edit-mentee.html" class="link-warning mx-1"  style="text-decoration: underline;">Edit</a>
+                                            <a href="delete-mentee.html" class="link-danger mx-1"mx-1 style="text-decoration: underline;">Delete</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>205</td>
+                                        <td>Business Requirements Analysis</td>
+                                        <td>Henley Westwood</td>
+                                        
+                                        <td>
+                                            <a href="mentee-detail.html" class="link-primary mx-1" style="text-decoration: underline;">View</a>
+                                            <a href="edit-mentee.html" class="link-warning mx-1"  style="text-decoration: underline;">Edit</a>
+                                            <a href="delete-mentee.html" class="link-danger mx-1"mx-1 style="text-decoration: underline;">Delete</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>206</td>
+                                        <td>Business Requirements Analysis</td>
+                                        <td>Rose Westwood</td>
+                                        
+                                        <td>
+                                            <a href="mentee-detail.html" class="link-primary mx-1" style="text-decoration: underline;">View</a>
+                                            <a href="edit-mentee.html" class="link-warning mx-1"  style="text-decoration: underline;">Edit</a>
+                                            <a href="delete-mentee.html" class="link-danger mx-1"mx-1 style="text-decoration: underline;">Delete</a>
+                                        </td>
+                                    </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
 
             <!-- Footer Start -->
             <div class="container-fluid pt-4 px-4">
