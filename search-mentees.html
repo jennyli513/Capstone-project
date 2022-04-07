@@ -113,12 +113,12 @@
                             <span class="d-none d-lg-inline-flex">Notification</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                            <a href="mentor-application" class="dropdown-item">
+                            <a href="approve-mentor-application.html" class="dropdown-item">
                                 <h6 class="fw-normal mb-0">Mentor application</h6>
                                 <small>15 minutes ago</small>
                             </a>
                             <hr class="dropdown-divider">
-                            <a href="mentee-application" class="dropdown-item">
+                            <a href="approve-mentor-application.html" class="dropdown-item">
                                 <h6 class="fw-normal mb-0">Mentee application</h6>
                                 <small>15 minutes ago</small>
                             </a>
@@ -142,7 +142,7 @@
             <div class="container-fluid pt-4 px-4">
 
                 <form class="d-none d-md-flex ms-4" >
-                    <input class="form-control border-1"  type="search" placeholder="Search">
+                    <input class="form-control border-1" id="myInput" onkeyup="myFunction()" type="search" placeholder="Search">
                     <button class="btn-primary mx-3" id="searchBtn" type="submit" style="width: 10%; border: none;">Search</button>
                 </form>
             </div>
@@ -151,7 +151,7 @@
                     <div class="row">
                        
                         <div class="col-sm-6 ">
-                            <select class="form-select mb-3" aria-label="Default select example">
+                            <select class="form-select mb-3" id="subjectDropdown" onchange="filterTable();" aria-label="Default select example">
                                 <option selected>Choose subject name</option>
                                 <option value="1">Information Systems in organisations (C) </option>
                                 <option value="2">Communications and Teamwork (C) </option>
@@ -180,7 +180,7 @@
             <div class="container-fluid pt-2 px-4">
                 <div class="bg-light text-center rounded p-4">
                     <div class="table-responsive">
-                        <table class="table text-start align-middle table-bordered table-hover mb-0">
+                        <table id="myTable" class="table text-start align-middle table-bordered table-hover mb-0">
                             <thead>
                                 <tr class="text-dark">
                                     <th scope="col">Id</th>
@@ -299,6 +299,52 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        function myFunction() {
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[2];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }       
+          }
+        }
+
+        function filterTable() {
+            // Variables
+            let dropdown, table, rows, cells, country, filter;
+            var e = document.getElementById("subjectDropdown");
+            dropdown = e.options[e.selectedIndex].text;
+            table = document.getElementById("myTable");
+            rows = table.getElementsByTagName("tr");
+           
+            console.log(dropdown);
+
+            // Loops through rows and hides those with countries that don't match the filter
+            for (let row of rows) { // `for...of` loops through the NodeList
+                cells = row.getElementsByTagName("td");
+                subject = cells[1] ; // gets the 2nd `td` or nothing
+                console.log( subject);
+                //console.log(subject.textContent);
+                // if the filter is set to 'All', or this is the header row, or 2nd `td` text matches filter
+                if (dropdown === "Choose subject name" || !subject ){
+                row.style.display = ""; // shows this row
+                }
+                else {
+                row.style.display = "none"; // hides this row
+                }
+            }
+            }
+        </script>
    
 </body>
 

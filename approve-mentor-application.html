@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Add Mentor</title>
+    <title>DASHMIN - Bootstrap Admin Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -30,6 +30,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+  
 </head>
 
 <body>
@@ -43,8 +44,8 @@
         <!-- Spinner End -->
 
 
-         <!-- Sidebar Start -->
-         <div class="sidebar pe-4 pb-3">
+        <!-- Sidebar Start -->
+          <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
                 <a href="index.html" class="navbar-brand mt-3 mx-1 mb-3">
                    Student Mentoring System
@@ -138,235 +139,146 @@
                 </div>
             </nav>
             <!-- Navbar End -->
-            
-            <!--Add mentor-->
-            <div class="container-fluid pt-4 px-4"> 
-                <div class="bg-light rounded h-100 p-4">
-                    <h6 class="mb-4">Add New Mentor</h6>
-                    <a href="search-mentors.html" style="text-decoration: underline;">
-                        <i class="fa-solid fa-arrow-left mx-2"></i>
-                        Back to list
-                    </a>
+             
+            <div class="container-fluid pt-4 px-4 mb-5"> 
+                <div class="bg-light rounded p-4">
+                    <h3 class="mb-4 text-center">Mentor Application</h3>
+                    
                     <form>
                         <div class="row mb-3">
                             <label for="name" class="col-sm-2 col-form-label">Name</label>
                             <div class="col-sm-10">
-                                <input type="name" class="form-control" id="email">
+                                <input type="name" class="form-control" id="email" value="New Mentor">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="studentId" class="col-sm-2 col-form-label">Student ID</label>
                             <div class="col-sm-10">
-                                <input type="studentId" class="form-control" id="studentId">
+                                <input type="studentId" class="form-control" id="studentId" value ="100344897">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="email" class="col-sm-2 col-form-label">Email</label>
                             <div class="col-sm-10">
-                                <input type="email" class="form-control" id="email">
+                                <input type="email" class="form-control" id="email" value="example@gmail.com">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <legend class="col-form-label col-sm-2 pt-0">Available Days</legend>
                             <div class="col-sm-10">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="availableDayCheck1" >
+                                    <input class="form-check-input" type="checkbox" id="availableDayCheck1" checked>
                                     <label class="form-check-label" for="availableDayCheck1">
                                         Monday
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="availableDayCheck2" >
+                                    <input class="form-check-input" type="checkbox" id="availableDayCheck2" checked>
                                     <label class="form-check-label" for="availableDayCheck2">
                                         Tuesday
                                     </label>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="availableDayCheck3" >
-                                    <label class="form-check-label" for="availableDayCheck3">
-                                        Wednesday
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="availableDayCheck4" >
-                                    <label class="form-check-label" for="availableDayCheck4">
-                                        Thursday
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="availableDayCheck5" >
-                                    <label class="form-check-label" for="availableDayCheck5" >
-                                        Friday
-                                    </label>
-                                </div>
+                              
                             </div>
                         </div>
-
+        
                         <div class="row mb-3">
                             <legend class="col-form-label col-sm-2 pt-0">Available Time</legend>
                             <div class="col-sm-10">
+                              
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="availableTimeCheck1" >
-                                    <label class="form-check-label" for="availableTimeCheck1">
-                                       9:00am - 5:00pm
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="availableTimeCheck2" >
+                                    <input class="form-check-input" type="checkbox" id="availableTimeCheck2" checked>
                                     <label class="form-check-label" for="availableTimeCheck2">
                                        1:00pm - 5:00om
                                     </label>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="availableTimeCheck3" >
-                                    <label class="form-check-label" for="availableTimeCheck3">
-                                        11:00am - 1:00pm
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="availableTimeCheck4" >
-                                    <label class="form-check-label" for="availableTimeCheck4">
-                                        1:00pm - 3:00pm
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="availableTimeCheck5" >
-                                    <label class="form-check-label" for="availableTimeCheck5">
-                                        Other time
-                                    </label>
-                                </div>
-                                <div class="col-sm-10" style="display: none;" id="availableTime">
-                                    <input type="text" class="form-control" placeholder="Write time here">
-                                </div>
+                              
                             </div>
                         </div>
-
+        
                         <div class="row mb-3">
                             <legend class="col-form-label col-sm-2 pt-0">Subject Name</legend>
                             <div class="col-sm-10">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck1" >
+                                    <input class="form-check-input" type="checkbox" id="gridCheck1" checked >
                                     <label class="form-check-label" for="gridCheck1">
                                         Information Systems in organisations ©
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck2" >
+                                    <input class="form-check-input" type="checkbox" id="gridCheck2" checked >
                                     <label class="form-check-label" for="gridCheck2">
                                         Communications and Teamwork  (C)
                                     </label>
                                 </div>
+                               
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck3" >
-                                    <label class="form-check-label" for="gridCheck3">
-                                        Business Requirements Analysis (C)
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck4" >
-                                    <label class="form-check-label" for="gridCheck4">
-                                        Information Security  Management (Stage 2 E)
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck5" >
-                                    <label class="form-check-label" for="gridCheck5" >
-                                        Change Management  (Stage 2 E)
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck6" >
-                                    <label class="form-check-label" for="gridCheck6">
-                                        Business Decision Analysis  (C)
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck7" >
-                                    <label class="form-check-label" for="gridCheck7">
-                                        Database Design (C)
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck8" >
-                                    <label class="form-check-label" for="gridCheck8">
-                                        Programming Web Services  (Stage 3 & 5 E)
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck9" >
-                                    <label class="form-check-label" for="gridCheck9">
-                                        Business transformation and Innovation  (Stage 3 & 5 E)
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck10" >
-                                    <label class="form-check-label" for="gridCheck10" >
-                                        Big Data and Business Intelligence. (C)  
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck11" >
-                                    <label class="form-check-label" for="gridCheck11">
-                                        Enterprise Cloud Computing  (C)  
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck12" >
-                                    <label class="form-check-label" for="gridCheck12">
-                                        Project Management(C)
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck13" >
-                                    <label class="form-check-label" for="gridCheck13">
-                                        Information Systems Support and Testing  (C)
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck14" >
+                                    <input class="form-check-input" type="checkbox" id="gridCheck14" checked>
                                     <label class="form-check-label" for="gridCheck14">
                                         IS Project (C) 
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck15" >
+                                    <input class="form-check-input" type="checkbox" id="gridCheck15" checked>
                                     <label class="form-check-label" for="gridCheck15" >
                                         Ethics and IT Governance  (C) 
                                     </label>
                                 </div>
                             </div>
                         </div>
-
+        
                         <div class="mb-5 text-center">
                              <!-- Button trigger modal -->
                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                Add Mentor
+                                Approve
+                            </button>
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop11">
+                                Decline
                             </button>
                             <!-- Modal -->
                             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                        <h5 class="modal-title" id="staticBackdropLabel">Add Mentor</h5>
+                                        <h5 class="modal-title" id="staticBackdropLabel"> Mentor Application</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                        Do you want to submit? 
+                                        Approve email sent to mentor email. 
                                         </div>
                                         <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                                        <button type="button" class="btn btn-primary" onclick="location.href='admin.html'">Yes</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
                                         </div>
                                     </div>
                                 </div>
                                
                             </div>
-                            <button type="button" class="btn btn-primary mx-2" onclick="location.href='admin.html';">Back to Dashboard</button>
+
+                               <!-- Modal -->
+                               <div class="modal fade" id="staticBackdrop11" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel"> Mentor Application</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                        Decline email sent to mentor email. 
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                          
                         </div>
                     </form>
                 </div>
         </div>
-          
+
+
             <!-- Footer Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-light rounded-top p-4">
@@ -400,14 +312,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-
-    <script>
-       $("#availableTimeCheck5").click(function() {
-          if($(this).is(":checked")) {
-           $("#availableTime").show();
-    } 
-});
-    </script>
+   
 </body>
 
 </html>
